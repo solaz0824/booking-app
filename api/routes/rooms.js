@@ -6,15 +6,16 @@ import {
   getRooms,
   updateRoom,
 } from "../controllers/room.js";
+import { verifyAdmin } from "../utils/verifyToken.js";
 
 const roomsRouter = express.Router();
 
 //CREATE
-roomsRouter.post("/", createRoom);
+roomsRouter.post("/:hotelId", verifyAdmin, createRoom);
 //UPDATE
-roomsRouter.put("/:id", updateRoom);
+roomsRouter.put("/:id", verifyAdmin, updateRoom);
 //DELETE
-roomsRouter.delete("/:id", deleteRoom);
+roomsRouter.delete("/:id/:hotelId", verifyAdmin, deleteRoom);
 //GET
 roomsRouter.get("/:id", getRoom);
 //GET ALL
