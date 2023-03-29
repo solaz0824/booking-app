@@ -1,0 +1,34 @@
+.navbar{
+  height: 50px;
+  background-color: #085051;
+  display: flex;
+  justify-content: center;
+}
+
+.navContainer{
+  width: 100%;
+  max-width: 1024px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo{
+  font-weight: 800;
+  font-size: large;
+}
+
+.navButton{
+  margin-left: 10px;
+  cursor: pointer;
+}
+/* 
+.navLogin {
+  border-color: #92e8d772;
+  color: #92e8d772;
+}
+
+.navLogin :hover{
+  background-color: #92e8d772;
+} */
